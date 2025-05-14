@@ -444,6 +444,8 @@
   }
 
   button {
+    background-color: transparent;
+    border: unset;
     svg {
       width: 24px;
       height: 24px;
@@ -546,6 +548,7 @@
   .askDamjan {
     padding: 12px;
     flex-wrap: wrap;
+    color: white;
   }
 
   .askDamjan input {
