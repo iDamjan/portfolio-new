@@ -32,14 +32,14 @@ function About() {
           </div>
           <div className="social-links">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/damjan-stojanovski-4b772520a/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin className="social-icon" />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/iDamjan"
               target="_blank"
               rel="noopener noreferrer"
             >
