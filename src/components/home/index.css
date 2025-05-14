@@ -497,7 +497,6 @@
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .container {
-    padding: 20px;
     height: auto;
   }
 

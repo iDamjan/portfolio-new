@@ -22,6 +22,7 @@ export default function Home() {
   async function askChat() {
     setResponse("This feature is not available yet. Stay tuned!");
     setShowResponse(true);
+    setInputMessage("");
     // try {
     //   if (!inputMessage.trim()) return; // Prevent empty submissions
     //   setShowResponse(!showResponse);
