@@ -1,0 +1,669 @@
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 650px;
+  margin: 0 auto;
+  height: 100%;
+  min-height: 100vh;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.cardsContainer {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  width: 100%;
+}
+
+.card {
+  background-color: var(--secondary-color);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.headingText {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: transparent;
+  grid-column: 3/ 5;
+  padding: 0;
+}
+
+.greeting {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 0.5px;
+}
+
+.name {
+  font-size: 5.25rem;
+  font-weight: 700;
+  color: var(--font-color);
+  letter-spacing: -1px;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--font-color-subtle);
+  opacity: 0.9;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+
+  opacity: 0.7;
+  line-height: 1.4;
+  margin-top: 8px;
+  font-weight: 300;
+  color: var(--font-color-subtle);
+}
+
+.projects {
+  grid-column: 1/ 3;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.projectsTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--font-color);
+  letter-spacing: -0.5px;
+}
+
+.projectsPreview {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.projectItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--secondary-color-hover);
+  transition: transform 0.2s ease;
+}
+
+.projectItem:hover {
+  transform: translateX(4px);
+}
+
+.projectIcon {
+  font-size: 1.5rem;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.projectName {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--font-color);
+}
+
+.projectTech {
+  font-size: 0.9rem;
+  color: var(--font-color-subtle);
+}
+
+.viewMoreBtn {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 500;
+  align-self: flex-start;
+  transition: transform 0.2s ease;
+  margin-top: 8px;
+}
+
+.viewMoreBtn:hover {
+  transform: translateX(4px);
+}
+
+/* Optional: Add hover effects for interactive cards */
+.card:not(.headingText, .modelCharacter):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.aboutMe {
+  grid-column: 3/ 5;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.aboutMeTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--font-color);
+  letter-spacing: -0.5px;
+}
+
+.aboutMeText {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--font-color-subtle);
+  opacity: 0.8;
+}
+
+.readMoreBtn {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 500;
+  align-self: flex-start;
+  transition: transform 0.2s ease;
+}
+
+.readMoreBtn:hover {
+  transform: translateX(4px);
+}
+
+.aboutMe:hover {
+  background-color: var(--secondary-color-hover, #1f325a);
+}
+
+.techStack {
+  grid-column: 3/5;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.techStackTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--font-color);
+  letter-spacing: -0.5px;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  background: var(--secondary-color);
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(50px * 16);
+  animation: scroll 30s linear infinite;
+}
+
+.slide {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 0 24px;
+}
+
+.tech-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--font-color);
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+
+.slide:hover .tech-icon {
+  transform: scale(1.1);
+  color: var(--accent-color);
+}
+
+.slide span {
+  font-size: 1rem;
+  color: var(--font-color-subtle);
+  font-weight: 500;
+}
+
+.viewDetailsBtn {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 500;
+  align-self: flex-start;
+  transition: transform 0.2s ease;
+  margin-top: auto;
+}
+
+.viewDetailsBtn:hover {
+  transform: translateX(4px);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-180px * 8));
+  }
+}
+
+/* Smoother pause effect */
+.slider:hover .slide-track {
+  animation-play-state: paused;
+}
+
+/* Optional: Add gradient fade effect on sides */
+.slider::before,
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  background: linear-gradient(to right, var(--secondary-color), transparent);
+}
+
+.slider::after {
+  right: 0;
+  background: linear-gradient(to left, var(--secondary-color), transparent);
+}
+
+.contact {
+  grid-column: 1/ 5;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--font-color);
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup input,
+.formGroup textarea {
+  background-color: var(--secondary-color-hover);
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  color: var(--font-color);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: var(--font-color-subtle);
+  opacity: 0.7;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitBtn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.formError {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff6b6b;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.formSuccess {
+  background-color: rgba(0, 255, 0, 0.1);
+  color: #4caf50;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.formSuccess p {
+  margin: 8px 0;
+}
+
+.modelCharacter {
+  position: relative;
+  grid-column: 1/ 3;
+  background-color: var(--secondary-color);
+  grid-row: 1 / 3;
+  overflow: hidden;
+  &:hover {
+    transform: translateY(0);
+  }
+}
+
+.askDamjan {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -50%;
+  width: calc(100% - var(--space-double) * 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 12px var(--space-single);
+  animation: slideUp 0.5s ease forwards;
+  .brainIcon {
+    color: var(--accent-color);
+    font-size: 2rem;
+  }
+  input {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    border: unset;
+    width: 100%;
+
+    &::placeholder {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--accent-color);
+      transition: all 0.2s ease;
+      &:hover {
+        transform: translateX(2px);
+        scale: 1.1;
+      }
+    }
+  }
+}
+
+.response {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -50%;
+  width: calc(100% - var(--space-double) * 2);
+  padding: var(--space-single);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  animation: slideUp 0.4s ease-in-out forwards;
+
+  button {
+    display: block;
+    background-color: transparent;
+    border: unset;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    padding: 0;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: var(--space-single);
+    margin-left: auto;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    bottom: -50%;
+    opacity: 0;
+  }
+  to {
+    bottom: var(--space-single);
+    opacity: 1;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    height: auto;
+  }
+
+  .cardsContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+
+  .headingText {
+    grid-column: 1;
+    margin-bottom: 10px;
+  }
+
+  .greeting {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .projects {
+    grid-column: 1;
+  }
+
+  .aboutMe {
+    grid-column: 1;
+  }
+
+  .techStack {
+    grid-column: 1;
+  }
+
+  .modelCharacter {
+    grid-column: 1;
+    height: 350px; /* Adjust height for mobile */
+  }
+
+  .askDamjan {
+    padding: 12px;
+    flex-wrap: wrap;
+  }
+
+  .askDamjan input {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .contact {
+    grid-column: 1;
+  }
+
+  .formGroup input,
+  .formGroup textarea,
+  .submitBtn {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .contactTitle {
+    font-size: 1.3rem;
+  }
+
+  /* Adjust font sizes for mobile */
+  .projectsTitle,
+  .aboutMeTitle,
+  .techStackTitle {
+    font-size: 1.3rem;
+  }
+
+  .aboutMeText {
+    font-size: 0.95rem;
+  }
+
+  .projectName {
+    font-size: 0.95rem;
+  }
+
+  .projectTech {
+    font-size: 0.85rem;
+  }
+
+  /* Improve tech stack for mobile */
+  .slider {
+    height: 120px;
+    padding: 16px 0;
+  }
+
+  .slide {
+    padding: 0 16px;
+  }
+
+  .tech-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .slide span {
+    font-size: 0.85rem;
+  }
+
+  /* Improve the Ask Damjan input for mobile */
+  .brainIcon {
+    font-size: 1.5rem;
+  }
+
+  .response {
+    padding: 16px;
+    font-size: 0.95rem;
+  }
+
+  .response button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet size adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .headingText {
+    grid-column: 1 / 3;
+  }
+
+  .greeting {
+    font-size: 1.8rem;
+  }
+
+  .name {
+    font-size: 3.5rem;
+  }
+
+  .projects {
+    grid-column: 1 / 3;
+  }
+
+  .aboutMe {
+    grid-column: 1 / 3;
+  }
+
+  .techStack {
+    grid-column: 1 / 3;
+  }
+
+  .modelCharacter {
+    grid-column: 1 / 3;
+  }
+
+  .contact {
+    grid-column: 1 / 3;
+  }
+}

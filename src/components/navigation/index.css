@@ -1,0 +1,113 @@
+.nav-grid {
+  display: grid;
+  gap: var(--spacing-unit);
+  padding: var(--spacing-unit);
+
+  /* Define specific grid areas */
+  grid-template-areas:
+    "item1 item2 item3 item4"
+    "item5 item6 item7 item8";
+
+  /* Or specific column/row sizes */
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-template-rows: auto auto;
+}
+
+/* Example of placing items in specific grid areas */
+.nav-item:nth-child(1) {
+  grid-area: item1;
+}
+.nav-item:nth-child(2) {
+  grid-area: item2;
+}
+/* etc... */
+
+/* Medium screens - 3 columns */
+@media screen and (max-width: 1024px) {
+  .nav-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet screens - 2 columns */
+@media screen and (max-width: 768px) {
+  .nav-grid {
+    grid-template-areas:
+      "item1 item2"
+      "item3 item4"
+      "item5 item6"
+      "item7 item8";
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile screens - 1 column */
+@media screen and (max-width: 480px) {
+  .nav-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Optional: If you want to control the height of grid items */
+.nav-grid-item {
+  min-height: 100px; /* Adjust as needed */
+  padding: var(--spacing-unit);
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--font-color);
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--font-color-subtle);
+  transition: all 0.2s ease;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* Active state */
+.nav-link.active {
+  color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-content {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}
