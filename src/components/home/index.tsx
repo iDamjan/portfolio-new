@@ -1,7 +1,7 @@
 import "./index.css";
 import { FaReact, FaNodeJs, FaAws, FaVuejs } from "react-icons/fa";
 import { SiNextdotjs, SiPostgresql, SiMongodb, SiSvelte } from "react-icons/si";
-import Experience from "@/components/Experience";
+import Experience from "../Experience";
 import { TbBrain } from "react-icons/tb";
 import { useState } from "react";
 

@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { useFBX, Center, Resize } from "@react-three/drei";
+import { useFBX, Resize } from "@react-three/drei";
 
 import Character from "./Character";
 
