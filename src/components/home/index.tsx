@@ -141,7 +141,7 @@ export default function Home() {
           <span className="title">Damjan Stojanovski</span>
         </div>
         <div className="card aboutMe">
-          <span className="aboutMeTitle">About Me</span>
+          <span className="aboutMeTitle">About Me (CV)</span>
           <p className="aboutMeText">
             A software developer passionate about building seamless and
             intuitive user experiences.
