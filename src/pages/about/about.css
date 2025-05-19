@@ -400,9 +400,21 @@
 }
 
 .github-link {
-  color: var(--accent-color-secondary);
+  color: #5d8a68;
   font-weight: 500;
   margin-top: 20px;
+  display: block;
+  padding: 10px 0;
+  background-color: #5d8a68;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+
+  &:hover {
+    background-color: #4a6fa5;
+    color: white;
+  }
 }
 
 /* Responsive adjustments */

@@ -55,6 +55,9 @@ function About() {
             <div className="skill-pills">
               <span className="skill-pill skill-primary">React</span>
               <span className="skill-pill skill-secondary">Next.js</span>
+              <span className="skill-pill skill-secondary">Vue.js</span>
+              <span className="skill-pill skill-secondary">Playwright</span>
+              <span className="skill-pill skill-secondary">Vitest</span>
               <span className="skill-pill skill-accent">TypeScript</span>
               <span className="skill-pill skill-primary">HTML5</span>
               <span className="skill-pill skill-secondary">CSS3</span>
@@ -165,7 +168,14 @@ function About() {
             </div>
           </div>
 
-          <p className="github-link">Check out my github for more projects!</p>
+          <a
+            href="https://github.com/iDamjan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-link"
+          >
+            Check out my github for more projects!
+          </a>
         </div>
 
         <div className="tab-content">
