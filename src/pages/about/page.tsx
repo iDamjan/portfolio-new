@@ -178,9 +178,31 @@ function About() {
           </a>
         </div>
 
-        <div className="tab-content">
+          <div className="tab-content">
           <h3 className="section-heading">Experience</h3>
           <div className="experience-content">
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-date">Jul 2025 - Now</div>
+              <div className="timeline-content">
+                <h3>Software Engineer</h3>
+                <p className="company">Surfe</p>
+                <p className="description">
+                  As a Software Engineer on the RevOps team at Surfe, I act as
+                  the technical backbone for our Go-To-Market teams, delivering
+                  agile data, full-stack, and infrastructure solutions. I empower
+                  the revenue organization with actionable insights by managing
+                  data workflows in Google BigQuery and building interactive
+                  analytics workspaces in Hex. To streamline daily operations, I
+                  build custom internal tools, developing high-performance
+                  backends in Go and intuitive frontends using Vue or React.
+                  Finally, I ensure our systems are secure and scalable by
+                  managing our GCP cloud infrastructure with Terraform, directly
+                  translating technical execution into revenue growth.
+                </p>
+              </div>
+            </div>
+
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-date">Contractor - B2C</div>
