@@ -3,12 +3,46 @@ import {
   FaGithub,
   FaEnvelope,
   FaMapMarkerAlt,
+  FaDownload,
 } from "react-icons/fa";
+import { useRef } from "react";
+import CVTemplate from "../../components/CVTemplate";
 import "./about.css";
 
 function About() {
+  const cvRef = useRef<HTMLDivElement>(null);
+
+  const handleDownloadPDF = async () => {
+    const element = cvRef.current;
+    if (!element) return;
+
+    const html2pdf = (await import("html2pdf.js")).default;
+
+    const opt = {
+      margin: 0,
+      filename: "Damjan_Stojanovski_CV.pdf",
+      image: { type: "jpeg", quality: 1 },
+      html2canvas: { scale: 2, useCORS: true, backgroundColor: "#ffffff" },
+      jsPDF: { unit: "px", format: [794, 1123], orientation: "portrait" },
+    };
+
+    html2pdf().set(opt).from(element).save();
+  };
+
   return (
-    <div className="about-container">
+    <>
+      {/* Hidden CV template used only for PDF generation */}
+      <div style={{ position: "absolute", left: "-9999px", top: 0, zIndex: -1 }}>
+        <CVTemplate ref={cvRef} />
+      </div>
+
+      <div className="pdf-download-bar">
+        <button className="download-pdf-btn" onClick={handleDownloadPDF}>
+          <FaDownload />
+          Download CV
+        </button>
+      </div>
+      <div className="about-container">
       {/* Left Column */}
       <div className="about-left-column">
         <div className="profile-section">
@@ -114,6 +148,27 @@ function About() {
           <div className="cv-projects">
             <div className="cv-project">
               <div className="project-header">
+                <h3>Wizz Learning</h3>
+                <span>Type - personal</span>
+              </div>
+              <p className="project-tech">React • Node.js • AI Agents • Voice AI</p>
+              <p className="project-description">
+                An AI-powered tutoring platform that enables educators to create
+                intelligent, subject-specific tutor agents — each with its own
+                persona, knowledge scope, and teaching style. Tutors support
+                both voice and text-based interactions, delivering a natural
+                conversational learning experience. Educators can then assign
+                these AI tutors to individual students, enabling fully
+                personalised learning paths at scale.
+              </p>
+              <p className="project-links-text">
+                <span className="project-link-label">Demo:</span> Locally
+                <span className="project-link-label ml">GitHub:</span> Private
+              </p>
+            </div>
+
+            <div className="cv-project">
+              <div className="project-header">
                 <h3>Promovere</h3>
                 <span>Type - contract</span>
               </div>
@@ -166,6 +221,7 @@ function About() {
                 <span className="project-link-label ml">GitHub:</span> Private
               </p>
             </div>
+
           </div>
 
           <a
@@ -266,6 +322,7 @@ function About() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

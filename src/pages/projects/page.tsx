@@ -18,6 +18,19 @@ interface Project {
 // Project data with your actual project images
 const projectsData: Project[] = [
   {
+    id: 0,
+    title: "Wizz Learning",
+    category: "AI / EdTech",
+    thumbnail: "/projects/wizz/1.png",
+    images: ["/projects/wizz/1.png"],
+    description:
+      "An AI-powered tutoring platform that enables educators to create intelligent, subject-specific tutor agents — each with its own persona, knowledge scope, and teaching style. Tutors support both voice and text-based interactions, delivering a natural conversational learning experience. Educators can assign AI tutors to individual students, enabling fully personalised learning paths at scale.",
+    technologies: ["React", "Node.js", "AI Agents", "Voice AI"],
+    demoUrl: "#",
+    githubUrl: "#",
+    isPrivate: true,
+  },
+  {
     id: 1,
     title: "Promovere",
     category: "Web Development",
